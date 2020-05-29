@@ -2,6 +2,12 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+hashtags = []
+with open('tags.txt', 'r') as file:
+    for line in file:
+        hashtags.append(line.rstrip())
+
+
 #open browser to the url
 browser = webdriver.Edge()
 browser.get('https://www.instagram.com/')
@@ -11,7 +17,7 @@ time.sleep(2)
 explore = browser.find_element_by_xpath('//a[@href= "/explore/"')
 explore.click()
 time.sleep(2)
-
+        
 #find the search box and type in the tag
 search = browser.find_element_by_css_selector("input[placeholder='Search']")
 search.send_keys('#inkart')
