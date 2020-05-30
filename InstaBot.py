@@ -14,7 +14,7 @@ browser.get('https://www.instagram.com/')
 time.sleep(2)
 
 #click on the explore button
-explore = browser.find_element_by_xpath('//a[@href= "/explore/"')
+explore = browser.find_element_by_xpath('//a[@href= "/explore/"]')
 explore.click()
 time.sleep(2)
         
@@ -28,9 +28,15 @@ suggestion1 = browser.find_element_by_xpath('//*[@id="react-root"]/section/nav/d
 suggestion1.click()
 time.sleep(2)
 
-#open the first image in recents
+#open the first image in recent section
 image = browser.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[2]/div/div[1]/div[1]/a/div')
 image.click()
+time.sleep(1)
+
+#like the picture
+like = browser.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]')
+like.click()
+time.sleep(1)
 
 time.sleep(5)
 
