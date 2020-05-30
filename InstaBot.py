@@ -33,11 +33,17 @@ image = browser.find_element_by_xpath('//*[@id="react-root"]/section/main/articl
 image.click()
 time.sleep(1)
 
-#like the picture
-like = browser.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]')
-like.click()
-time.sleep(1)
+for _ in range(30):
+    #like the picture
+    like = browser.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]')
+    like.click()
+    time.sleep(1)
 
-time.sleep(5)
+    #go to the next pic
+    next = browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a[2]')
+    next.click()
+    time.sleep(1)
 
-browser.close()
+#time.sleep(5)
+
+#browser.close()
