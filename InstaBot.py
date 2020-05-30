@@ -28,6 +28,10 @@ suggestion1 = browser.find_element_by_xpath('//*[@id="react-root"]/section/nav/d
 suggestion1.click()
 time.sleep(2)
 
+#open the first image in recents
+image = browser.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[2]/div/div[1]/div[1]/a/div')
+image.click()
+
 time.sleep(5)
 
 browser.close()
