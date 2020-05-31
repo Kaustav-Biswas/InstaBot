@@ -27,14 +27,14 @@ for tag in hashtags:
     #open the first suggestion
     suggestion1 = browser.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/div[2]/div[2]/div/a[1]')
     suggestion1.click()
-    time.sleep(2)
+    time.sleep(4)
 
     #open the first image in recent section
     image = browser.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[2]/div/div[1]/div[1]/a/div')
     image.click()
     time.sleep(1)
 
-    for _ in range(30):
+    for _ in range(15):
         #like the picture
         like = browser.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]')
         like.click()
@@ -45,6 +45,8 @@ for tag in hashtags:
         next.click()
         time.sleep(1)
 
+    close = browser.find_element_by_xpath('/html/body/div[4]/div[3]/button')
+    close.click()
 #time.sleep(5)
 
 #browser.close()
