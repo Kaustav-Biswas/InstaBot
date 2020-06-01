@@ -47,6 +47,6 @@ for tag in hashtags:
 
     close = browser.find_element_by_xpath('/html/body/div[4]/div[3]/button')
     close.click()
-#time.sleep(5)
 
-#browser.close()
+time.sleep(5)
+browser.close()
