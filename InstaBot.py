@@ -34,11 +34,17 @@ for tag in hashtags:
     image.click()
     time.sleep(1)
 
-    for _ in range(15):
+    for _ in range(25):
         #like the picture
-        like = browser.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]')
-        like.click()
-        time.sleep(1)
+        try:
+            like = browser.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]')
+            like.click()
+            time.sleep(1)
+        except:
+            next = browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a[2]')
+            next.click()
+            time.sleep(1)
+            continue
 
         #go to the next pic
         next = browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a[2]')
